@@ -25,22 +25,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <div className="w-full flex justify-center">
-        <Header />
-      </div>
-
       <body
-        className={`antialiased`}
+        className={`antialiased h-screen flex flex-col`}
         style={{
           fontFamily:
             "'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
         }}
       >
-        {children}
+        <div className="w-full flex justify-center">
+          <Header />
+        </div>
+        <div className="flex-grow">{children}</div>
+        <div className="w-full flex justify-center">
+          <Footer />
+        </div>
       </body>
-      <div className="w-full flex justify-center">
-        <Footer />
-      </div>
     </html>
   );
 }
