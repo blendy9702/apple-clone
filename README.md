@@ -8,3 +8,4 @@
 - tailwind css
 - typescript
 - React-Icons
+- Jotai
